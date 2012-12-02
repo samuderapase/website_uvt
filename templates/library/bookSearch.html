@@ -1,0 +1,68 @@
+{% extends "library/dira.html" %}
+
+{% block title %}Perpustakaan Universitas Virtual Terbuka{% endblock %}
+
+{% block sidebar %}
+  {% if active %}
+  <div id="active-search">
+  <h3>Filter</h3>
+    {% for k, act in active.items %}
+    <a class="action" href="{{act.link}}">-</a> {{act.text}}<br />
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div id="facets">
+  <h3>Filtrer par</h3>
+    {% for t, facet in facets.items %}
+    <div class="facet">
+      <h3>{{ t }}</h3>
+      {% for v in facet %}
+      <a class="action" href="{{v.link}}">+</a> {{v.text}} ({{v.count}})<br />
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block content %}
+  <h1>Index Perpustakaan UVT Online</h1>
+  <br>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Buku</th>
+        <th>Penulis</th>
+        <th>Bagian</th>
+        <th>Bahasa</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for book in books.object_list %}
+        <tr class="{% cycle 'odd' 'even' %}">
+          <th><a href="/bk/{{book.id}}">{{book.title}}</a></th>
+          <td>{% for author in book.author.all %}<span>{{ author }}</span>&nbsp;&nbsp;&nbsp;{% endfor %}</td>
+          <td>{{book.category}}</td>
+          <td class="book-lang">{{book.language}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <span class="step-links">
+        {% if books.has_previous %}
+            <a href="?page={{ books.previous_page_number }}">&lsaquo;&lsaquo;</a>
+        {% endif %}
+
+        <span class="current">
+            page {{ books.number }}/{{ books.paginator.num_pages }}
+        </span>
+
+        {% if books.has_next %}
+            <a href="?page={{ books.next_page_number }}">&rsaquo;&rsaquo;</a>
+        {% endif %}
+    </span>
+  </div>
+{% endblock %}

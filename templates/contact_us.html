@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- START LEFT-SIDE CONTACT FORM AREA -->                        
+                            <div class="contact-form span8">
+                                <h1>Contact Us</h1>
+                                <form id="validForm">
+                                    {{ form.non_field_errors }}
+                                        <div class="control-group">
+                                            {{ form.subjek.errors }}
+                                            <label class="control-label" for="id_subject">Subjek<sup>*</sup></label>
+                                            <div class="controls">
+                                                <input type="text" class="span4" id="id_subjek" placeholder="Name">
+												<span class="help-inline">Masukan Subjek</span>
+					      {{ form.subjek }}
+                                            </div> 
+                                            
+                                        </div>                                         
+                                        <div class="control-group">
+                                           {{ form.pengirim.errors }}
+                                            <label class="control-label" for="inputEmail">SUREL<sup>*</sup></label>
+                                            <div class="controls">
+                                                <input type="text" class="span4" id="inputEmail" placeholder="Email">
+                                                <span class="help-inline">Masukkan Email dengan Benar</span>
+                                                 {{ form.pesan }}
+                                            </div>
+                                        </div>                                        
+                                        <div class="control-group">
+                                         {{ form.pengirim.errors }}
+                                            <label for="textarea" class="control-label">PESAN<sup>*</sup></label>
+                                            <div class="controls">
+                                                <textarea rows="4" class="span8" id="textarea"></textarea>
+												<span class="help-inline">Silakan Tulis Pesan</span>
+					 {{ form.pesan }}
+                                            </div>
+                                        </div>
+                                        <div class="control-group form-button-offset">
+                                            <input type="submit" class="btn" value="Send Message" />
+                                        </div>
+                                    </form> 
+                                                      <ul class="errorlist">
+    <li>Sender is required.</li>
+</ul>
+{% if form.subject.errors %}
+    <ol>
+    {% for error in form.subjek.errors %}
+        <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+    </ol>
+{% endif %}
+{% endblock %}             
+                                </div>
+<!-- END LEFT-SIDE CONTACT FORM AREA -->
+
+<!-- BEGIN RIGHT-SIDE CONTACT FORM AREA -->
+                                <div class="contact-info span4">
+                                    <h2>bizstrap</h2>
+<!-- COMPANY ADDRESS -->                                    
+                                    <address>
+                                        1234 Main Street,<br />
+                                        Anytown,<br />
+                                        USA<br />
+                                        Phone: 123 456 7890<br />
+                                        Fax: +49 123 456 7891<br />
+                                        Email: <a href="mailto:hello@example.com">hello@example.com</a><br />
+                                        Web: <a href="#">example.com</a>
+                                    </address>
+<!-- SOCIAL ICONS -->                                                                
+                                    <ul class="socials unstyled">
+                                        <li><a href="#" class="flickr"></a></li>
+                                        <li><a href="#" class="twitter"></a></li>
+                                        <li><a href="#" class="facebook"></a></li>
+                                        <li><a href="#" class="youtube"></a></li>
+                                        <li><a href="#" class="dribbble"></a></li>
+                                        <li><a href="#" class="pinterest"></a></li>
+                                    </ul>
+<!-- HOURS OF OPERATION -->                                    
+                                    <h2>Hours of Business Operation</h2>
+                                        <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="small">Monday:</td>
+                                                <td class="bold">8am to 6pm</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="small">Tuesday:</td>
+                                                <td class="bold">8am to 6pm</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="small">Wednesday:</td>
+                                                <td class="bold">8am to 6pm</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="small">Thursday:</td>
+                                                <td class="bold">8am to 6pm</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="small">Friday:</td>
+                                                <td class="bold">8am to 6pm</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="small">Saturday:</td>
+                                                <td>Closed</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="small">Sunday:</td>
+                                                <td>Closed</td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                </div>
+<!-- END RIGHT-SIDE CONTACT FORM AREA -->
+
+<!-- GOOGLE MAP -->                                
+<iframe style="width: 100%; height: 600px; border: none;" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Mockingbird+Station,+Dallas,+TX&amp;aq=1&amp;oq=mockinStation,+Dallas,+TX&amp;sll=32.786144,-96.788897&amp;sspn=0.00929,0.018947&amp;ie=UTF8&amp;hq=&amp;hnear=Mockingbird+Station,+Dallas,+Texas+75206&amp;t=m&amp;ll=32.845774,-96.772385&amp;spn=0.043266,0.061712&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Mockingbird+Station,+Dallas,+TX&amp;aq=1&amp;oq=mockinStation,+Dallas,+TX&amp;sll=32.786144,-96.788897&amp;sspn=0.00929,0.018947&amp;ie=UTF8&amp;hq=&amp;hnear=Mockingbird+Station,+Dallas,+Texas+75206&amp;t=m&amp;ll=32.845774,-96.772385&amp;spn=0.043266,0.061712&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                        </div>               
+                    </div>
+                    </div>
+                </div>
+                <hr>
+

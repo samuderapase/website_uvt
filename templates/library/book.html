@@ -1,0 +1,66 @@
+{% extends "library/dira.html" %}
+
+{% block title %}{{book.title}}{% endblock %}
+
+{% block sidebar %}
+  <div id="book-data">
+    <ul id="book-info">
+      {% if book.language %}
+      <li><label>Bahasa</label>: <span><a href="/bk/language:{{book.language}}">{{book.language}}</a></span></li>
+      {% endif %}
+      {% if book.category %}
+      <li><label>Kategori</label>: <span><a href="/bk/category:{{book.category.id}}">{{book.category}}</a></span></li>
+      {% endif %}
+      {% if book.publisher %}
+      <li><label>Penerbit</label>: <span><a href="/bk/publisher:{{book.publisher.id}}">{{book.publisher}}</a></span></li>
+      {% endif %}
+      {% if book.year %}
+      <li><label>Year</label>: {{book.year}}</span></li>
+      {% endif %}
+   </ul>
+    <ul id="book-numbers">
+      {% if book.olid %}
+        {% if book.olink %}
+        <li><label>Open Library ID</label>: <span><a href="{{book.olink}}">{{book.olid}}</a></span></li>
+        {% else %}
+        <li><label>Open Library ID</label>: <span>{{book.olid}}</span></li>
+        {% endif %}
+      {% endif %}
+      {% if book.oclc %}
+      <li><label>OCLC/WorldCat</label>: <span><a href="http://www.worldcat.org/oclc/{{book.oclc}}?tab=details">{{book.oclc}}</a></span></li>
+      {% endif %}
+      {% if book.isbn %}
+      <li><label>ISBN</label>: <span>{{book.isbn}}</span></li>
+      {% endif %}
+      {% if book.lccn %}
+      <li><label>LCCN</label>: <span>{{book.lccn}}</span></li>
+      {% endif %}
+    </ul>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div id="book-links">
+    {% if book.ebook %}
+      <a href="{{book.ebook}}" target="_blank"><h3>Version numérique</h3>
+    {% endif %}
+    {% if book.cover %}
+      <img src="{{book.cover}}" />
+    {% endif %}
+    {% if book.ebook %}
+      </a>
+    {% endif %}
+  </div>
+
+  <h1 id="book-title">{{ book.title }}</h1>
+  <h2 id="book-subtitle">{{ book.subtitle }}</h2>
+  {% if book.author %}
+    <h3 id="book-authors">
+    {% for author in book.author.all %}
+      <span class="author"><a href="/bk/author:{{author.id}}">{{author}}</a></span>&nbsp;
+    {% endfor %} 
+    </h3>
+  {% endif %}
+  
+  <div id="book-desc">{{ book.description }}</div>
+{% endblock %}

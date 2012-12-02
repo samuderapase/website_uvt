@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load article_tags %}
+
+
+
+{% block content %}
+	   <h1>Artikel terakhir</h1>
+        {% get_articles 10 as recent %}
+        {% for article in recent %}
+        {% if forloop.first %}<ul>{% endif %}
+            <li><a href="{{ article.get_absolute_url }}" title="Read this article">{{ article.title }}</a></li>
+        {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
+    </li>
+    {% endblock %}
+
+    {% block article_tags %}
+    <li>
+        <h2>Tag Cloud</h2>
+        {% tag_cloud %}
+    </li>
+    {% endblock %}
+    
+    {% block footer %}
+<p>Copyright &copy; {% now "Y" %} Me. All rights reserved.</p>
+{% endblock %}

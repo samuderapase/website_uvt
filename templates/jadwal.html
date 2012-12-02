@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="container">
+	        <div class="hero-unit">
+        <h3>JADWAL KULIAH PEMOGRAMAN PYTHON ONLINE UNIVERSITAS VIRTUAL TERBUKA</h3><hr>	          
+            
+	            <div class="table-hover">
+	              <div class="table">
+                        	            
+	            <table>
+	                <tbody>
+	                    <tr>
+	                        <th>No</th>
+	                        <th>Hari</th>
+	                        <th>Jam</th>
+	                        <th>Bulan-Tanggal-Tahun</th>
+	                        <th>Materi</th>
+	                        <th>Dosen</th>
+	                        <th>Keterangan</th>
+	                    </tr>    
+	                </tbody>
+	                    {% for jadwal in jadwal %}          
+	                        <tr>
+	                            <td>{{ jadwal.id }}</td>
+	                            <td>{{ jadwal.hari }}</td>
+	                            <td>{{ jadwal.jam }}</td>
+	                            <td>{{ jadwal.tanggal }}</td>
+	                            <td>{{ jadwal.materi }}</td>
+	                            <td>{{ jadwal.dosen }}</td>
+	                            <td>{{ jadwal.keterangan }}</td>
+	                            
+	                        </tr>     
+                        {% endfor %}
+                        
+                </table>
+	        </div>
+	        </div>
+                
+	</div>
+	    		
+
+{% endblock %}
+
+  

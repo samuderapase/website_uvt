@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>kontak</h2>
+
+<form action="/kontak/" method="post">{% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ form.subjek.errors }}
+        <label for="id_subject">Subjek Surel:</label>
+        {{ form.subjek }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.pesan.errors }}
+        <label for="id_message">Pesan:</label>
+        {{ form.pesan }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.pengirim.errors }}
+        <label for="id_sender">Alamat Surel:</label>
+        {{ form.pengirim }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.cc_myself.errors }}
+        <label for="id_cc_myself">CC yourself?</label>
+        {{ form.cc_myself }}
+    </div>
+    <p><input type="submit" value="Kirim Pesan" /></p>
+</form>
+
+<ul class="errorlist">
+    <li>Sender is required.</li>
+</ul>
+{% if form.subject.errors %}
+    <ol>
+    {% for error in form.subjek.errors %}
+        <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+    </ol>
+{% endif %}
+{% endblock %}

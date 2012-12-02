@@ -1,0 +1,12 @@
+django==1.4.2
+markup
+disqus
+django-articles
+south
+textile
+tagging
+django-registration
+pygments
+PIL
+markdown
+

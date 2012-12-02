@@ -1,0 +1,649 @@
+{% load article_tags %}
+{% load article_tags i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="#">
+
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>UNIVERSITAR VIRTUAL TERBUKA</title> 
+	<meta name="description" content="Gravis Bootstrap Theme"/>
+	<meta name="keywords" content="Template, Theme, web, html5, css3, Bootstrap" />
+	<meta name="author" content="Łukasz Holeczek from creativeLabs"/>
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: Facebook Open Graph -->
+	<meta property="og:title" content=""/>
+	<meta property="og:description" content=""/>
+	<meta property="og:type" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:image" content=""/>
+	<!-- end: Facebook Open Graph -->
+
+    <!-- start: CSS -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="/static/css/style.css" rel="stylesheet">
+	<link href="/static/css/parallax-slider.css" rel="stylesheet">
+	
+	<!--[if lt IE 9 ]>
+	  <link href="css/styleIE.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!--[if IE 9 ]>
+	  <link href="css/styleIE9.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!-- end: CSS -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	
+	<!--start: Header -->
+	<header>
+		
+		<!--start: Container -->
+		<div class="container">
+			
+			<!--start: Row -->
+			<div class="row">
+					
+				<!--start: Logo -->
+				<div class="logo span6">
+						
+					<a class="brand" href="#"><img src="/static/images/logo.png" alt="logo"></a>
+						
+				</div>
+				<!--end: Logo -->
+				
+				<!--start: Logo -->
+				<div class="social-links span6 hidden-phone">
+						
+					<ul class="social-links">
+						
+						<li><a href="#"><i class="fa-icon-facebook"></i></a></li>
+						<li><a href="#"><i class="fa-icon-github"></i></a></li>
+						<li><a href="#"><i class="fa-icon-pinterest"></i></a></li>
+						<li><a href="#"><i class="fa-icon-twitter"></i></a></li>
+						<li><a href="#"><i class="fa-icon-envelope-alt"></i></a></li>
+						
+					</ul>
+						
+				</div>
+				<!--end: Logo -->
+			
+			</div>
+			<!--end: Row -->
+			
+			<!--start: Row -->
+			<div class="row-fluid">
+					
+				<!--start: Navigation -->
+				<div class="navigation"> 
+				
+					<div class="navbar navbar-inverse span9">
+			    		<div class="navbar-inner">
+			          		<a class="btn btn-navbar btnOverlay" data-toggle="collapse" data-target=".nav-collapse">
+			            		menu
+			          		</a>
+			          		<div class="nav-collapse collapse">
+			            		<ul class="nav">
+									<li class="active"><a href="{% url uvt.views.index %}">Beranda</a></li>
+			              			<li ><a href="{% url uvt.views.artikel %}">Artikel</a></li>
+									<li class="dropdown">
+			                			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<b class="caret"></b></a>
+			                			<ul class="dropdown-menu">
+			                  				<li><a href="social-icons.html">Social Icons</a></li>
+											<li><a href="icons.html">Standard Icons</a></li>
+											<li><a href="icons_set2.html">Font Awesome Icons</a></li>
+											<li><a href="typography.html">Typography</a></li>
+											<li><a href="shortcodes.html">Shortcodes</a></li>
+											<li><a href="list-styles.html">List Styles</a></li>
+			                			</ul>
+			              			</li>
+									<li class="dropdown">
+			                			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Perpustakaan<b class="caret"></b></a>
+			                			<ul class="dropdown-menu">
+			                  				<li><a href="portfolio3.html">3 Columns</a></li>
+											<li><a href="portfolio4.html">4 Columns</a></li>
+			                			</ul>
+			              			</li>									
+									<li ><a href="pricing.html">Aplikasi</a></li>
+									<li ><a href="blog.html">Forum</a></li>
+									<li><a href="#">Anggota</a></li>
+			              			<li ><a href="contact.html">Contact</a></li>
+			            		</ul>
+			          		</div>
+			        	</div>
+			      	</div>
+				
+					<div class="search span3 hidden-tablet hidden-phone">
+						
+						<input type="text" name="search">
+					
+					</div>
+				
+				</div>	
+				<!--end: Navigation -->	
+					
+			</div>
+			<!--end: Row -->
+			
+		</div>
+		<!--end: Container-->			
+			
+	</header>
+	<!--end: Header-->
+	<!--start: Container -->
+	
+	
+	<div class="container">
+				
+		<!--start: Wrapper-->
+		<div id="wrapper">
+		
+			<!-- start: Slider -->
+			<div class="slider-wrapper">
+
+				<div id="da-slider" class="da-slider">
+					<div class="da-slide">
+						<h2>Modern & Clean</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+						<a href="#" class="da-link">Read more</a>
+						<div class="da-img"><img src="/static/images/images.jpg" alt="image01" /></div>
+					</div>
+					<div class="da-slide">
+						<h2>Responsive Design</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+						<a href="#" class="da-link">Read more</a>
+						<div class="da-img"><img src="/static/images/images2.png" alt="image02" /></div>
+					</div>
+					<div class="da-slide">
+						<h2>Over 1000 satisfied customers</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+						<a href="#" class="da-link">Read more</a>
+						<div class="da-img" style="margin-left: -150px"><img src="/static/images/mapa.png" alt="image03" /></div>
+					</div>
+					<div class="da-slide">
+						<h2>HTML5</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+						<a href="#" class="da-link">Read more</a>
+						<div class="da-img" style="margin-left: -100px"><img src="/static/images/html5.png" alt="image04" /></div>
+					</div>
+					<nav class="da-arrows">
+						<span class="da-arrows-prev"></span>
+						<span class="da-arrows-next"></span>
+					</nav>
+				</div>
+
+			</div>
+			<!-- end: Slider -->
+			{% block content %}
+			<hr class="clean">
+			
+			<!-- start: Row -->
+      		<div class="row-fluid">
+	
+        		<div class="span3">
+          			<div class="box">
+						<i class="fa-icon-resize-full"></i>
+						<h3>Responsive Design</h3>
+						<h5>Lorem ipsum dolor sit amet</h5>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						</p>
+						<div class="clear"></div>
+					</div>
+        		</div>
+
+        		<div class="span3">
+          			<div class="box">
+						<i class="fa-icon-thumbs-up"></i>
+						<h3>Konfrensi Python</h3>
+						<h5>testsetsetsetsetsetset</h5>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						</p>
+						<div class="clear"></div>
+					</div>
+        		</div>
+
+        		<div class="span3">
+          			<div class="box">
+						<i class="fa-icon-beaker"></i>
+						<h3>Aplikasi Python</h3>
+						<h5>Lorem ipsum dolor sit amet</h5>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						</p>
+						<div class="clear"></div>
+					</div>
+        		</div>
+
+				<div class="span3">
+          			<div class="box">
+						<i class="fa-icon-cogs"></i>
+						<h3>Ulasan Django</h3>
+						<h5>Lorem ipsum dolor sit amet</h5>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						</p>
+						<div class="clear"></div>
+					</div>
+        		</div>
+
+			</div>
+			<!-- end: Row -->
+			
+			<hr>
+			
+			<!-- start: Row -->
+      		<div class="row-fluid">
+	
+				<div class="span9">
+					
+					<div class="title-out"><h3>Latest Works</h3></div>
+					
+					<!-- start: Row -->
+		      		<div class="row-fluid">
+			
+						<div class="span4">
+	
+							<div class="picture">
+								<a href="/static/images/car.jpg" rel="image" title="mobile app">
+									<img src="/static/images/car.jpg" alt="picture">
+									<div class="image-overlay-zoom"></div>
+								</a>
+								<div class="item-description">
+									<h4><a href="#">Mobile App</a></h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+								</div>
+							</div>
+					
+        				</div>
+
+						<hr class="visible-phone">
+					
+						<div class="span4">
+
+							<div class="picture">
+								<a href="project.html">
+									<img src="/static/images/web_app1.jpg" alt="picture">
+									<div class="image-overlay-link"></div>
+								</a>
+								<div class="item-description">
+									<h4><a href="#">Mobile App</a></h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+								</div>
+							</div>
+
+		        		</div>
+		
+						<hr class="visible-phone">
+
+						<div class="span4">
+
+							<div class="picture">
+								<a href="/static/images/mobile_app1.jpg" rel="image" title="mobile app">
+									<img src="/static/images/mobile_app1.jpg" alt="picture">
+									<div class="image-overlay-zoom"></div>
+								</a>
+								<div class="item-description">
+									<h4><a href="#">Mobile App</a></h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+								</div>
+							</div>
+
+						</div>
+					
+        			</div>
+					<!-- end: Row -->
+                 
+				</div>
+				
+				<hr class="visible-phone">
+
+        		<div class="span3">
+					
+					<!-- start: List Style -->
+
+					<div class="title-out"><h3>Why graVis?</h3></div>
+					<ul class="check_list">
+						<li>Fully responsive so your content will always look good on any screen size</li>
+						<li>Awesome sliders give you the opportunity to showcase important content</li>
+						<li>Tested on iPhone and iPad with Retina Display</li>
+						<li>Multiple layout options for home pages, portfolio section & blog section</li>
+						<li>We offer very good support because we care about your site as much as you do.</li>
+						<li>Over 400 Icons .</li>
+					</ul>
+					<!-- end: List Style -->
+					
+        		</div>
+
+      		</div>
+			<!-- end: Row -->
+			
+			<hr>
+			
+			<!-- start: Row -->
+			<div class="row-fluid">
+
+				<div class="span4">
+					<div class="title-out"><h3>Blog</h3></div>
+					
+					<!-- start: Post -->
+					<div class="post">
+						<div class="info">
+							<span class="post-date">
+								<span class="day">1</span>
+								<span class="month-year">June, 2012</span>
+							</span>
+						</div>	
+						<div class="post-content">
+							<div class="post-title">
+								<h4><a href="post.html">Post title</a></h4>
+							</div>
+							<div class="post-description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+								</p>
+							</div>
+							<a class="post-entry" href="post.html">Read More...</a>
+						</div>
+					</div>
+					<!-- end: Post -->
+					
+					<!-- start: Post -->
+					<div class="post">
+						<div class="info">
+							<span class="post-date">
+								<span class="day">1</span>
+								<span class="month-year">June, 2012</span>
+							</span>
+						</div>	
+						<div class="post-content">
+							<div class="post-title">
+								<h4><a href="post.html">Post title</a></h4>
+							</div>
+							<div class="post-description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+								</p>
+							</div>
+							<a class="post-entry" href="post.html">Read More...</a>
+						</div>
+					</div>
+					<!-- end: Post -->
+						
+				</div>
+				
+				<div class="span4">
+					<div class="title-out"><h3>Investor News</h3></div>
+					
+					<!-- start: Post -->
+					<div class="post">
+						<div class="info">
+							<span class="post-date">
+								<span class="day">1</span>
+								<span class="month-year">June, 2012</span>
+							</span>
+						</div>	
+						<div class="post-content">
+							<div class="post-title">
+								<h4><a href="post.html">Post title</a></h4>
+							</div>
+							<div class="post-description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+								</p>
+							</div>
+							<a class="post-entry" href="post.html">Read More...</a>
+						</div>
+					</div>
+					<!-- end: Post -->
+					
+					<!-- start: Post -->
+					<div class="post">
+						<div class="info">
+							<span class="post-date">
+								<span class="day">1</span>
+								<span class="month-year">June, 2012</span>
+							</span>
+						</div>	
+						<div class="post-content">
+							<div class="post-title">
+								<h4><a href="post.html">Post title</a></h4>
+							</div>
+							<div class="post-description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+								</p>
+							</div>
+							<a class="post-entry" href="post.html">Read More...</a>
+						</div>
+					</div>
+					<!-- end: Post -->
+						
+				</div>	
+
+				<div class="span4">
+					<div class="title-out"><h3>Current Stock Price</h3></div>
+					<div id="stockPrice" class="center" style="height:286px"></div>
+				</div>	
+
+			</div>
+			<!-- end: Row -->
+			
+			<hr class="clean">
+	{% endblock %}		
+
+		
+			<hr class="clean">
+					
+			<!-- start Clients List -->	
+			<div class="clients row-fluid">
+		
+				<div class="client span2"><img src="/static/images/logos/1.png" alt="client" /></div>
+				<div class="client span2"><img src="/static/images/logos/2.png" alt="client" /></div>
+				<div class="client span2"><img src="/static/images/logos/3.png" alt="client" /></div>
+				<div class="client span2"><img src="/static/images/logos/10.png" alt="client" /></div>
+				<div class="client span2"><img src="/static/images/logos/9.png" alt="client" /></div>
+				<div class="client span2"><img src="/static/images/logos/6.png" alt="client" /></div>
+		
+			</div>
+			<!-- end Clients List -->
+					
+		</div>
+		<!--end: Container-->
+	
+	</div>
+	<!-- end: Wrapper  -->			
+
+	<!-- start: Container -->
+	<div class="container">
+	
+		<!-- start: Footer -->
+		<div id="footer">
+		
+			<!-- start: Row -->
+			<div class="row-fluid">
+
+				<!-- start: About -->
+				<div class="span3">
+					
+					<h3>creativeLabs</h3>
+
+					<p>
+						<i class="fa-icon-map-marker"></i> 30 South Park Avenue
+					</p>
+					<p>	
+						<i class="fa-icon-map-marker"></i> San Francisco, CA 94108, USA
+					</p>	
+					<p>	
+						<i class="fa-icon-phone"></i> Phone: (123) 456-7890
+					</p>
+					<p>	
+						<i class="fa-icon-print"></i> Fax: +08 (123) 456-7890
+					</p>
+					<p>
+						<i class="fa-icon-envelope"></i> Email: contact@companyname.com
+					</p>
+					<p>
+						<i class="fa-icon-globe"></i> Web: companyname.com
+					</p>
+						
+				</div>
+				<!-- end: About -->
+
+				<!-- start: Latest Tweets -->
+				<div class="span3">
+					
+					<h3>Latest Tweets</h3>
+					
+					<ul id="twitter">
+						
+					</ul>
+
+					<div class="clear"></div>
+					
+					
+				</div>
+				<!-- end: Latest Tweets -->
+
+				<!-- start: Photo Stream -->
+				<div class="span3">
+					
+					<h3>Flickr Photo Stream</h3>
+					<div class="flickr-widget">
+						<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=12&display=latest&size=s&layout=x&source=user&user=29609591@N08"></script>
+						<div class="clear"></div>
+					</div>
+					
+				</div>
+				<!-- end: Photo Stream -->
+				
+				<!-- start: Follow Us -->
+				<div class="span3">
+					
+					<h3>Follow Us</h3>
+					
+					<div id="social-r" class="tooltips">
+						<a href="#" rel="tooltip" title="Amazon" class="amazon">Amazon</a>
+						<a href="#" rel="tooltip" title="Behance" class="behance">Behance</a>
+						<a href="#" rel="tooltip" title="Blogger" class="blogger">Blogger</a>
+						<a href="#" rel="tooltip" title="DeviantART" class="deviantart">DeviantART</a>
+						<a href="#" rel="tooltip" title="Dribbble" class="dribbble">Dribbble</a>
+						<a href="#" rel="tooltip" title="Dropbox" class="dropbox">Dropbox</a>
+						<a href="#" rel="tooltip" title="Evernote" class="evernote">Evernote</a>
+						<a href="#" rel="tooltip" title="Facebook" class="facebook">Facebook</a>
+						<a href="#" rel="tooltip" title="Forrst" class="forrst">Forrst</a>
+						<a href="#" rel="tooltip" title="Github" class="github">Github</a>
+						<a href="#" rel="tooltip" title="Google Plus" class="googleplus">Google Plus</a>
+						<a href="#" rel="tooltip" title="Joli Cloud" class="jolicloud">Joli Cloud</a>
+						<a href="#" rel="tooltip" title="Last FM" class="last-fm">Last FM</a>
+						<a href="#" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
+						<a href="#" rel="tooltip" title="Picasa" class="picasa">Picasa</a>
+						<a href="#" rel="tooltip" title="Pintrest" class="pintrest">Pintrest</a>
+						<a href="#" rel="tooltip" title="RSS" class="rss">RSS</a>
+						<a href="#" rel="tooltip" title="Skype" class="skype">Skype</a>
+						<a href="#" rel="tooltip" title="Spotify" class="spotify">Spotify</a>
+						<a href="#" rel="tooltip" title="StumpleUpon" class="stumbleupon">StumbleUpon</a>
+						<a href="#" rel="tooltip" title="Tumblr" class="tumblr">Tumblr</a>
+						<a href="#" rel="tooltip" title="Twitter" class="twitter">Twitter</a>
+						<a href="#" rel="tooltip" title="Vimeo" class="vimeo">Vimeo</a>
+						<a href="#" rel="tooltip" title="WordPress" class="wordpress">WordPress</a>
+						<a href="#" rel="tooltip" title="Xing" class="xing">Xing</a>
+						<a href="#" rel="tooltip" title="Yahoo" class="yahoo">Yahoo</a>
+						<a href="#" rel="tooltip" title="YouTube" class="youtube">YouTube</a>
+					</div>
+				
+				</div>
+				<!-- end: Follow Us -->
+				
+			</div>
+			<!-- end: Row -->	
+
+		</div>
+		<!-- end: Footer -->
+	
+		<!-- start: Under Footer -->
+		<div id="under-footer">
+			
+			<!-- start: Row -->
+			<div class="row-fluid">
+
+				<!-- start: Under Footer Logo -->
+				<div class="span2">
+					<div id="under-footer-logo">
+						<a class="brand" href="#">gra<span>V</span>is</a>
+					</div>
+				</div>
+				<!-- end: Under Footer Logo -->
+
+				<!-- start: Under Footer Copyright -->
+				<div class="span9">
+					
+					<div id="under-footer-copyright">
+						&copy; 2012, <a href="http://clabs.co">creativeLabs</a>. Designed by <a href="http://clabs.co">creativeLabs</a> in Poland <img src="/static/images/poland.png" alt="Poland" style="margin-top:-4px">
+					</div>
+					
+				</div>
+				<!-- end: Under Footer Copyright -->
+
+				<!-- start: Under Footer Back To Top -->
+				<div class="span1">
+						
+					<div id="under-footer-back-to-top">
+						<a href="#"></a>
+					</div>
+				
+				</div>
+				<!-- end: Under Footer Back To Top -->
+			
+			</div>
+			<!-- end: Row -->
+			
+		</div>	
+		<!-- end: Under Footer -->
+		
+	</div>
+	<!-- end: Container  -->	
+
+<!-- start: Java Script -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/jquery-1.8.2.js"></script>
+<script src="/static/js/isotope.js"></script>
+<script src="/static/js/jquery.imagesloaded.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/flexslider.js"></script>
+<script src="/static/js/carousel.js"></script>
+<script src="/static/js/jquery.cslider.js"></script>
+<script src="/static/js/slider.js"></script>
+<script src="/static/js/fancybox.js"></script>
+<script src="/static/js/twitter.js"></script>
+<script src="/static/js/jquery.placeholder.min.js"></script>
+
+<script src="/static/js/excanvas.js"></script>
+<script src="/static/js/jquery.flot.min.js"></script>
+<script src="/static/js/jquery.flot.pie.min.js"></script>
+<script src="/static/js/jquery.flot.stack.js"></script>
+<script src="/static/js/jquery.flot.resize.min.js"></script>
+
+<script defer="defer" src="/static/js/custom.js"></script>
+<!-- end: Java Script -->
+
+</body>
+</html>

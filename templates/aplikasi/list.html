@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load comments %}
+{% load tinymce_tags %}
+{% block content %}
+
+<div class="container">
+	        <div class="hero-unit">
+	        <br>
+	        <h2>APLIKASI PYTHON</h2>
+	        </br>
+	  
+           <!-- Posts  -->
+               <div class="table-hover">
+	              <div class="table">
+                       	            
+	            <table>
+			      <tbody>
+	                    <tr>
+	                        <th>Nama Aplikasi</th>
+	                        <th>Developer</th>
+	                        <th>Deskripsi</th>
+	                        <th>Link</th>
+	                        <th>Tanggal</th>
+	                      </tr>    
+	                     
+	                </tbody>
+	                
+                     {% for aplikasi in aplikasi.object_list %}
+						<td><b>{{ aplikasi.nama }}</b></td>
+						<td>{{ aplikasi.developer }}</td>
+						<td>{{ aplikasi.deskripsi|linebreaks }}</td>
+					<td><b><a href="{{ aplikasi.url }}">Link GitHub</a></b></td>                        
+						<td>{{ aplikasi.tanggal }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+	        </div>
+	       </div>
+          
+        <!-- Next/Prev page links  -->
+        {% if aplikasi.object_list and aplikasi.paginator.num_pages > 1 %}
+        <div class="pagination" style="margin-top: 20px; margin-left: -20px; ">
+            <span class="step-links">
+                {% if aplikasi.has_previous %}
+                    <a href= "?page={{ aplikasi.previous_page_number }}">Postingan Baru &lt;&lt; </a>
+                {% endif %}
+
+                <span class="current">
+                    &nbsp;Page {{ aplikasi.number }} of {{ aplikasi.paginator.num_pages }}
+                </span>
+
+                {% if posts.has_next %}
+                    <a href="?page={{ aplikasi.next_page_number }}"> &gt;&gt; Postingan Lama</a>
+                {% endif %}
+            </span>
+        </div>
+        {% endif %}
+
+    </div>
+{% endblock %}  

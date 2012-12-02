@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+{% block content %}
+
+<h2><center>Perpustakaan Universitas Virtual Indonesia</center></h2>
+<hr>
+{% for perpus in perpustakaan.object_list %}
+<div id="content" class="clearfix">
+		<section id="left">
+			<div id="userStats" class="clearfix">
+				<div class="pic">
+					<a href="#"><img src="{{ perpus.cover}}" width="150" height="150" /></a>
+				</div>
+				
+				<div class="data">
+					<h2>{{ perpus.judul }}</h2>
+					<h2>{{ perpus.penulis }}</h2>
+					<h3>Kategori Buku</h3>
+					<p>{{ perpus.kategori }}</p>
+					<p>{{ perpus.tanggal_publikasi }}</p>
+				</ul>
+				</div>
+			<h2>Keterangan:</h2>
+			<p>{{ perpus.tentang|linebreaks }}</p>
+		</section>
+		</div>
+{% endfor %}
+
+{% if perpustakaan.has_previous %}
+<div class="pagination" style="margin-top: 20px; margin-left: -20px; ">
+            <span class="step-links">
+   <a href="?page={{ insurance_perpustakaan.previous_page_number }}">sebelumnya</a>
+{% endif %}
+
+{% for num in insurance_perpustakaan.paginator.page_range %}
+    {% ifequal num insurance_perpustakaan.number %}
+        <span class="current page">{{ num }}</span>
+    {% else %}
+        <a href="?page={{ num }}"> {{ num }}</a>
+    {% endifequal %} 
+{% endfor %}
+    
+{% if insurance_perpustakaan.has_next %}
+    <a href="?page={{ insurance_perpustakaan.next_page_number }}"> Selanjutnya</a>
+{% endif %}
+     </span>
+       
+
+{% endblock %}

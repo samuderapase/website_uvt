@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+<title>
+  {% block title %}
+  Tempel UVT
+  {% endblock %}
+</title>
+  {% block script %}
+  <script language="javascript">
+  function place_focus(){
+  }
+  </script>
+  {% endblock %}
+</head>
+
+<body onload="place_focus()">
+<div id="wrap">
+<div id="header">
+  {% block header %}
+  <h1>
+   Tempel dan Bagikan!
+  </h1>
+  {% endblock %}
+</div>
+
+<div id="container">
+  {% block content %}
+  {% endblock %}
+</div>
+<div id="footer">
+  {% block footer %}
+  <span class=blurb"">
+    <a href="{% url djpaste_index %}">Tempel Baru</a> | <a href="http://uswaretech.com/">code by Usware</a>
+  </span>
+  {% endblock %}
+</div>
+</div>
+</body>
+</html>
